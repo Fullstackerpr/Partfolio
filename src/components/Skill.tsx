@@ -9,7 +9,7 @@ const Skill = () => {
           <h1 className="text-[30px] font-bold tracking-widest">SKILLS</h1>
         </div>
 
-        <div className="max-w-[1200px] mx-auto px-14">
+        <div className="max-w-[1200px] mx-auto px-54">
           <h2 className="font-bold text-[30px] tracking-wider pb-[65px] text-center">
             USING NOW:
           </h2>
@@ -28,7 +28,7 @@ const Skill = () => {
           </div>
         </div>
 
-        <div className="max-w-[1200px] mx-auto px-14">
+        <div className="max-w-[1200px] mx-auto px-54">
           <h2 className="font-bold text-[30px] tracking-wider pb-[65px] text-center">
             LEARNING:
           </h2>
