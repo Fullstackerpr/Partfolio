@@ -4,3 +4,7 @@
     --first: #D7D7D7;
     --second: #000;
 }
+
+html {
+  scroll-behavior: smooth;
+}

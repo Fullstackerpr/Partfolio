@@ -24,16 +24,24 @@ const Hero = () => {
               alt="mail"
               className="w-8 h-8 cursor-pointer"
             />
-            <img
-              src="/git.svg"
-              alt="github"
-              className="w-8 h-8 cursor-pointer"
-            />
-            <img
-              src="/in.svg"
-              alt="linkedin"
-              className="w-8 h-8 cursor-pointer"
-            />
+            <a
+              href="https://github.com/Fullstackerpr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/git.svg"
+                alt="github"
+                className="w-8 h-8 cursor-pointer"
+              />
+            </a>
+            <a href="https://www.linkedin.com/in/bahodir-nabijanov-816804350/" target="_blank" rel="noopener noreferrer">
+              <img
+                src="/in.svg"
+                alt="linkedin"
+                className="w-8 h-8 cursor-pointer"
+              />
+            </a>
           </div>
         </div>
 
@@ -43,11 +51,11 @@ const Hero = () => {
             clipPath: "polygon(6% 0, 100% 0, 100% 100%, 0% 100%)",
           }}
         >
-          {/* <img
-            src="/hero.png"
+          <img
+            src="/myimg.jpg"
             alt="hero"
-            className="max-h-[90%] object-contain"
-          /> */}
+            className="w-[500px] h-[600px] object-contain"
+          />
         </div>
       </div>
 
@@ -68,7 +76,7 @@ const Hero = () => {
         </div>
 
         <div className="full">
-          <img src="/itb.png" alt="" className="h-full object-cover"/>
+          <img src="/itb.png" alt="" className="h-full object-cover" />
         </div>
       </div>
     </div>

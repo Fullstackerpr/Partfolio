@@ -22,16 +22,32 @@ const Footer = () => {
       </div>
 
       <div className="flex justify-center gap-[28px] mb-[43px]">
-        <a href="https://www.facebook.com/">
+        <a
+          href="https://www.facebook.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Facebook />
         </a>
-        <a href="https://www.linkedin.com/in/bahodir-nabijanov-816804350/">
+        <a
+          href="https://www.linkedin.com/in/bahodir-nabijanov-816804350/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Linkedin />
         </a>
-        <a href="https://instagram.com/nabijanov_uz">
+        <a
+          href="https://instagram.com/nabijanov_uz"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Instagram />
         </a>
-        <a href="mailto:bahodirnabijanov782@gmail.com">
+        <a
+          href="mailto:bahodirnabijanov782@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Mail />
         </a>
       </div>
