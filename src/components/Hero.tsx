@@ -3,9 +3,9 @@ import { memo } from "react";
 const Hero = () => {
   return (
     <div>
-      <div className="flex justify-between items-center h-[810px] overflow-hidden bg-[#D7D7D7]">
+      <div className="flex justify-between items-center h-screen overflow-hidden bg-[#D7D7D7]">
         <div
-          className="pl-42 flex flex-col justify-center w-full font-bold bg-[#D7D7D7]"
+          className="px-[273px] flex flex-col justify-center font-bold bg-[#D7D7D7]"
           style={{
             clipPath: "polygon(0 0, 100% 0, 94% 100%, 0% 100%)",
           }}
@@ -64,20 +64,11 @@ const Hero = () => {
             varius turpis vel pharetra. Ut ante justo, consequat vitae elementum
             tempor, accumsan nec eros.{" "}
           </p>
-          <div className="flex items-center mt-8">
-            <div className="border-1 border-white h-6 mr-4" />
-            <button
-              type="submit"
-              className="tracking-widest font-semibold text-sm"
-            >
-              READ MORE
-            </button>
-            <div className="border-1 border-white h-6 ml-4" />
-          </div>
+          <button className="font-semibold text-[15px]">READ MORE</button>
         </div>
 
         <div className="full">
-          <img src="/itb.png" alt="" className="h-full object-cover" />
+          <img src="/itb.png" alt="" className="h-full object-cover"/>
         </div>
       </div>
     </div>

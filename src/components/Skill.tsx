@@ -4,13 +4,13 @@ import { memo } from "react";
 const Skill = () => {
   return (
     <section id="skill">
-      <div className="bg-[#D7D7D7] text-center py-36 px-12">
+      <div className="bg-gradient-to-b from-[#D7D7D7] via-white to-[#D7D7D7] text-center py-36 px-12">
         <div className="inline-block border-4 px-10 py-4 mb-[79px]">
           <h1 className="text-[30px] font-bold tracking-widest">SKILLS</h1>
         </div>
 
-        <div className="max-w-[1200px] mx-auto px-14 text-start">
-          <h2 className="font-bold text-[30px] tracking-wider pb-[65px] ">
+        <div className="max-w-[1200px] mx-auto px-14">
+          <h2 className="font-bold text-[30px] tracking-wider pb-[65px] text-center">
             USING NOW:
           </h2>
           <div className="grid grid-cols-4 gap-8">
@@ -28,11 +28,11 @@ const Skill = () => {
           </div>
         </div>
 
-        <div className="px-[530px]">
-          <h2 className="font-bold text-[30px] tracking-wider pb-[65px]">
-            LEARNING::
+        <div className="max-w-[1200px] mx-auto px-14">
+          <h2 className="font-bold text-[30px] tracking-wider pb-[65px] text-center">
+            LEARNING:
           </h2>
-          <div className="grid grid-cols-4">
+          <div className="grid grid-cols-4 gap-8">
             {Learning?.map((data, inx) => (
               <div
                 key={inx}

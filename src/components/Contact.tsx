@@ -3,7 +3,7 @@ import { memo } from "react";
 const Contact = () => {
   return (
     <section id="contact">
-      <div className="flex justify-center items-center min-h-screen bg-gradient-to-b from-gray-100 via-white to-gray-100 px-4">
+      <div className="flex justify-center items-center min-h-screen bg-gradient-to-b from-[#D7D7D7] via-white to-[#D7D7D7] px-4">
         <div className="text-center max-w-xl w-full">
           <div className="inline-block border-4 px-10 py-4 mb-8">
             <h1 className="text-[30px] font-bold tracking-[0.3em]">CONTACT</h1>
@@ -30,7 +30,7 @@ const Contact = () => {
                 type="text"
                 name="name"
                 placeholder="ENTER YOUR NAME*"
-                className="w-full py-2 px-1 placeholder-gray-500 focus:outline-none bg-transparent"
+                className="w-full py-2 px-1 focus:outline-none bg-transparent"
                 required
               />
             </div>
@@ -39,7 +39,7 @@ const Contact = () => {
                 type="email"
                 name="email"
                 placeholder="ENTER YOUR EMAIL*"
-                className="w-full py-2 px-1 placeholder-gray-500 focus:outline-none bg-transparent"
+                className="w-full py-2 px-1 focus:outline-none bg-transparent"
                 required
               />
             </div>
@@ -48,14 +48,14 @@ const Contact = () => {
                 type="tel"
                 name="phone"
                 placeholder="PHONE NUMBER"
-                className="w-full py-2 px-1 placeholder-gray-500 focus:outline-none bg-transparent"
+                className="w-full py-2 px-1 focus:outline-none bg-transparent"
               />
             </div>
             <div className="border-b-4">
               <textarea
                 name="message"
                 placeholder="YOUR MESSAGE*"
-                className="w-full py-2 px-1 placeholder-gray-500 focus:outline-none bg-transparent h-28 resize-none"
+                className="w-full py-2 px-1 focus:outline-none bg-transparent h-28 resize-none"
                 required
               />
             </div>
@@ -64,7 +64,7 @@ const Contact = () => {
               <div className="border-1 h-6 mr-4" />
               <button
                 type="submit"
-                className="tracking-widest font-semibold text-sm"
+                className="tracking-widest font-semibold text-sm cursor-pointer"
               >
                 SUBMIT
               </button>
