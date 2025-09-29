@@ -16,29 +16,29 @@ const About = () => {
 
         <div className="flex justify-center items-center gap-6 mb-[85px]">
           <div className="flex items-center mt-8">
-            <div className="border-1 h-6 mr-4" />
+            <div className="h-6 w-[1px] bg-black mr-4" />
             <button
               type="submit"
               className="tracking-widest font-semibold text-sm"
             >
               EXPLORE
             </button>
-            <div className="border-1 h-6 ml-4" />
+            <div className="h-6 w-[1px] bg-black ml-4" />
           </div>
         </div>
 
         <div className="flex justify-center mb-10">
           <div className="w-16 border-t mr-2" />
-          <div className="w-4 h-1 border-b-2 transform rotate-45 mr-2" />
-          <div className="w-4 h-1 border-b-2 transform rotate-45 mr-2" />
-          <div className="w-4 h-1 border-b-2 transform -rotate-45" />
-          <div className="w-4 h-1 border-b-2 transform -rotate-45" />
+          <div className="w-4 h-1 border-b-2 rotate-45 mr-2" />
+          <div className="w-4 h-1 border-b-2 rotate-45 mr-2" />
+          <div className="w-4 h-1 border-b-2 -rotate-45" />
+          <div className="w-4 h-1 border-b-2 -rotate-45" />
           <div className="w-16 border-t ml-2" />
         </div>
 
         <div className="mt-[108px] flex flex-col items-center gap-20">
-          <div className="flex flex-row gap-40">
-            <div className="text-left max-w-xs">
+          <div className="flex flex-col md:flex-row gap-16 md:gap-40 items-center md:items-start">
+            <div className="text-center md:text-left max-w-xs">
               <h4 className="font-bold tracking-widest mb-2">DESIGN</h4>
               <p className="text-xs">
                 I can design the site based on your needs and suggestions. I can
@@ -47,21 +47,20 @@ const About = () => {
               </p>
             </div>
 
-            <div className="text-left max-w-xs">
+            <div className="text-center md:text-left max-w-xs">
               <h4 className="font-bold tracking-widest mb-2">DEVELOPMENT</h4>
               <p className="text-xs">
-                I can design the site based on your needs and suggestions. I can
-                also design the site from scratch and consult you during the
-                job.
+                Based on a project created by me or another one, sent by you, I
+                can program the website to be fully functional and responsive.
               </p>
-            </div>
+            </div>  
           </div>
 
-          <div className="text-left max-w-xs">
+          <div className="text-center md:text-left max-w-xs">
             <h4 className="font-bold tracking-widest mb-2">MAINTENANCE</h4>
             <p className="text-xs">
-              I can design the site based on your needs and suggestions. I can
-              also design the site from scratch and consult you during the job.
+              In case of any problems or the need for changes, I can introduce
+              new functionalities and solutions.
             </p>
           </div>
         </div>
