@@ -20,13 +20,27 @@ const Header = () => {
         }}
       >
         <ul className="flex items-center gap-10 text-white">
-          <li className="cursor-pointer">About me</li>
-          <li className="cursor-pointer">Skills</li>
-          <li className="cursor-pointer">Portfolio</li>
           <li>
-            <button className="bg-white text-black px-6 py-2 rounded-full font-bold">
-              CONTACT ME
-            </button>
+            <a href="#about" className="cursor-pointer hover:underline">
+              About me
+            </a>
+          </li>
+          <li>
+            <a href="#skill" className="cursor-pointer hover:underline">
+              Skills
+            </a>
+          </li>
+          <li>
+            <a href="#portfolio" className="cursor-pointer hover:underline">
+              Portfolio
+            </a>
+          </li>
+          <li>
+            <a href="#contact">
+              <button className="bg-white text-black px-6 py-2 rounded-full font-bold">
+                CONTACT ME
+              </button>
+            </a>
           </li>
         </ul>
       </div>
