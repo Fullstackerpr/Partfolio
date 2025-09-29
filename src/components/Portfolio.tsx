@@ -1,9 +1,11 @@
-import { memo } from 'react';
+import { memo } from "react";
 
 const Portfolio = () => {
   return (
     <div>
-      <h2>Portfolio</h2>
+      <div className="inline-block border-4 px-10 py-4 mb-8">
+        <h1 className="text-[30px] font-bold tracking-widest">PORTFOLIO</h1>
+      </div>
     </div>
   );
 };

@@ -3,16 +3,16 @@ import { memo } from "react";
 
 const Skill = () => {
   return (
-    <div className="bg-[#D7D7D7] text-center py-36 px-4">
-      <div className="inline-block border-4 border-black px-10 py-4 mb-[79px]">
+    <div className="bg-[#D7D7D7] text-center py-36 px-12">
+      <div className="inline-block border-4 px-10 py-4 mb-[79px]">
         <h1 className="text-[30px] font-bold tracking-widest">SKILLS</h1>
       </div>
 
-      <div className="px-[530px]">
-        <h2 className="font-bold text-[30px] tracking-wider pb-[65px]">
+      <div className="max-w-[1200px] mx-auto px-14 text-start">
+        <h2 className="font-bold text-[30px] tracking-wider pb-[65px] ">
           USING NOW:
         </h2>
-        <div className="grid grid-cols-4">
+        <div className="grid grid-cols-4 gap-8">
           {Skills?.map((data, inx) => (
             <div
               key={inx}

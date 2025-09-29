@@ -3,7 +3,7 @@ import { memo } from "react";
 const About = () => {
   return (
     <div className="bg-[#D7D7D7] text-center py-36 px-4">
-      <div className="inline-block border-4 border-black px-10 py-4 mb-8">
+      <div className="inline-block border-4 px-10 py-4 mb-8">
         <h1 className="text-[30px] font-bold tracking-widest">ABOUT ME</h1>
       </div>
 
@@ -13,10 +13,26 @@ const About = () => {
         viverra facilisis ut ac est.
       </p>
 
-      <div className="flex justify-center items-center gap-6 mb-6">
-        <span className="w-8 h-px bg-black"></span>
-        <button className="uppercase font-medium">Explore</button>
-        <span className="w-8 h-px bg-black"></span>
+      <div className="flex justify-center items-center gap-6 mb-[85px]">
+        <div className="flex items-center mt-8">
+          <div className="border-1 h-6 mr-4" />
+          <button
+            type="submit"
+            className="tracking-widest font-semibold text-sm"
+          >
+            EXPLORE
+          </button>
+          <div className="border-1 h-6 ml-4" />
+        </div>
+      </div>
+
+      <div className="flex justify-center mb-10">
+        <div className="w-16 border-t mr-2" />
+        <div className="w-4 h-1 border-b-2 transform rotate-45 mr-2" />
+        <div className="w-4 h-1 border-b-2 transform rotate-45 mr-2" />
+        <div className="w-4 h-1 border-b-2 transform -rotate-45" />
+        <div className="w-4 h-1 border-b-2 transform -rotate-45" />
+        <div className="w-16 border-t ml-2" />
       </div>
 
       <div className="mt-[108px] flex flex-col items-center gap-20">

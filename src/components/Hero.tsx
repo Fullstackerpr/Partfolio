@@ -3,7 +3,7 @@ import { memo } from "react";
 const Hero = () => {
   return (
     <div>
-      <div className="flex justify-between items-center h-screen overflow-hidden bg-[#D7D7D7]">
+      <div className="flex justify-between items-center h-[810px] overflow-hidden bg-[#D7D7D7]">
         <div
           className="pl-42 flex flex-col justify-center w-full font-bold bg-[#D7D7D7]"
           style={{
@@ -43,11 +43,11 @@ const Hero = () => {
             clipPath: "polygon(6% 0, 100% 0, 100% 100%, 0% 100%)",
           }}
         >
-          <img
+          {/* <img
             src="/hero.png"
             alt="hero"
             className="max-h-[90%] object-contain"
-          />
+          /> */}
         </div>
       </div>
 
@@ -64,11 +64,20 @@ const Hero = () => {
             varius turpis vel pharetra. Ut ante justo, consequat vitae elementum
             tempor, accumsan nec eros.{" "}
           </p>
-          <button className="font-semibold text-[15px]">READ MORE</button>
+          <div className="flex items-center mt-8">
+            <div className="border-1 border-white h-6 mr-4" />
+            <button
+              type="submit"
+              className="tracking-widest font-semibold text-sm"
+            >
+              READ MORE
+            </button>
+            <div className="border-1 border-white h-6 ml-4" />
+          </div>
         </div>
 
         <div className="full">
-          <img src="/itb.png" alt="" className="h-full object-cover"/>
+          <img src="/itb.png" alt="" className="h-full object-cover" />
         </div>
       </div>
     </div>

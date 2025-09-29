@@ -13,13 +13,13 @@ const Header = () => {
       </div>
 
       <div
-        className="flex items-center justify-center w-full text-white font-semibold"
+        className="flex items-center justify-center w-full font-semibold"
         style={{
           backgroundColor: "black",
           clipPath: "polygon(6% 0, 100% 0, 100% 100%, 0% 100%)",
         }}
       >
-        <ul className="flex items-center gap-10">
+        <ul className="flex items-center gap-10 text-white">
           <li className="cursor-pointer">About me</li>
           <li className="cursor-pointer">Skills</li>
           <li className="cursor-pointer">Portfolio</li>
