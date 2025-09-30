@@ -35,7 +35,11 @@ const Hero = () => {
                 className="w-8 h-8 cursor-pointer"
               />
             </a>
-            <a href="https://www.linkedin.com/in/bahodir-nabijanov-816804350/" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.linkedin.com/in/bahodir-nabijanov-816804350/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src="/in.svg"
                 alt="linkedin"
@@ -59,10 +63,20 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="flex gap-[100px] bg-[#1D1D1D] text-white px-[102px]">
-        <div className="w-full py-[54px]">
-          <h2 className="font-bold text-[30px] mb-[60px]">IT BERRIES</h2>
-          <p className="mb-[26px] text-[15px]">
+      <div className="relative flex flex-col md:flex-row gap-[40px] md:gap-[100px] bg-[#1D1D1D] text-white px-[20px] md:px-[102px] overflow-hidden">
+        <div className="absolute inset-0 md:hidden">
+          <img
+            src="/itb.png"
+            alt="it berries background"
+            className="w-full h-full object-cover opacity-20"
+          />
+        </div>
+
+        <div className="relative w-full py-[30px] md:py-[54px] text-center md:text-left z-10">
+          <h2 className="font-bold text-[24px] md:text-[30px] mb-[30px] md:mb-[60px]">
+            IT BERRIES
+          </h2>
+          <p className="mb-[20px] md:mb-[26px] text-[14px] md:text-[15px] leading-relaxed">
             Nulla in velit a metus rhoncus tempus. Nulla congue nulla vel sem
             varius finibus. Sed ornare sit amet lorem sed viverra. In vel urna
             quis libero viverra facilisis ut ac est. Morbi commodo, eros in
@@ -70,13 +84,19 @@ const Hero = () => {
             tellus. Etiam enim erat, suscipit eu semper a, dictum sit amet elit.
             Nunc egestas nisi eget enim gravida facilisis. Pellentesque laoreet
             varius turpis vel pharetra. Ut ante justo, consequat vitae elementum
-            tempor, accumsan nec eros.{" "}
+            tempor, accumsan nec eros.
           </p>
-          <button className="font-semibold text-[15px]">READ MORE</button>
+          <button className="font-semibold text-[14px] md:text-[15px]">
+            READ MORE
+          </button>
         </div>
 
-        <div className="full">
-          <img src="/itb.png" alt="" className="h-full object-cover" />
+        <div className="hidden md:flex w-full justify-end">
+          <img
+            src="/itb.png"
+            alt="it berries"
+            className="h-full object-cover"
+          />
         </div>
       </div>
     </div>

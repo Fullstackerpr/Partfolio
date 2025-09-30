@@ -14,20 +14,38 @@ const Skill = () => {
             USING NOW:
           </h2>
 
-          <div className="overflow-x-auto scrollbar-hide">
-            <div className="grid grid-cols-2 md:grid-cols-6 gap-8 min-w-max px-4">
-              {Skills?.map((data, inx) => (
+          <div className="block md:hidden overflow-x-auto scrollbar-hide">
+            <div className="flex gap-6 px-4 min-w-max">
+              {Skills.map((data, inx) => (
                 <div
                   key={inx}
-                  className="flex flex-col justify-center items-center"
+                  className="flex flex-col justify-center items-center min-w-[70px]" 
                 >
-                  <img src={data.img} alt={data.name} width={84} />
-                  <h4 className="pt-[17px] font-normal text-[20px] pb-[30px]">
-                    {data.name}
-                  </h4>
+                  <img
+                    src={data.img}
+                    alt={data.name}
+                    className="w-12 h-12 object-contain"
+                  />
+                  <h4 className="pt-2 text-sm">{data.name}</h4>
                 </div>
               ))}
             </div>
+          </div>
+
+          <div className="hidden md:grid grid-cols-6 gap-8 px-4">
+            {Skills.map((data, inx) => (
+              <div
+                key={inx}
+                className="flex flex-col justify-center items-center"
+              >
+                <img
+                  src={data.img}
+                  alt={data.name}
+                  className="w-16 h-16 md:w-20 md:h-20 object-contain"
+                />
+                <h4 className="pt-4 text-lg">{data.name}</h4>
+              </div>
+            ))}
           </div>
         </div>
       </div>
