@@ -1,6 +1,13 @@
-import { memo } from "react";
+'use client'
+
+import { FormEvent, memo } from "react";
 
 const Contact = () => {
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+  }
+
   return (
     <section id="contact">
       <div className="flex justify-center items-center min-h-screen bg-gradient-to-b from-[#D7D7D7] via-white to-[#D7D7D7] px-4">
@@ -26,7 +33,7 @@ const Contact = () => {
             <div className="w-10 md:w-16 border-t ml-1 md:ml-2" />
           </div>
 
-          <form className="space-y-4 md:space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
             <div className="border-b-4">
               <input
                 type="text"
