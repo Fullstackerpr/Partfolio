@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
 import { useState } from "react";
-import { Menu, X } from "lucide-react"; 
+import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,10 +45,20 @@ const Header = () => {
               </button>
             </a>
           </li>
+          <li>
+            <select
+              name=""
+              id=""
+              className="bg-white text-black px-2 py-1 rounded cursor-pointer outline-0"
+            >
+              <option value="ru">🇷🇺 RU</option>
+              <option value="en">🇺🇸 EN</option>
+              <option value="uz">🇺🇿 UZ</option>
+            </select>
+          </li>
         </ul>
       </nav>
 
-      {/* Mobile Burger Button */}
       <button
         className="md:hidden text-white"
         onClick={() => setIsOpen(!isOpen)}
@@ -56,7 +66,6 @@ const Header = () => {
         {isOpen ? <X size={28} /> : <Menu size={28} />}
       </button>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="absolute top-full left-0 w-full bg-black text-white flex flex-col items-center gap-6 py-6 md:hidden">
           <a
@@ -85,6 +94,15 @@ const Header = () => {
               CONTACT ME
             </button>
           </a>
+          <select
+            name=""
+            id=""
+            className="bg-white text-black px-2 py-1 rounded cursor-pointer outline-0"
+          >
+            <option value="ru">🇷🇺 RU</option>
+            <option value="en">🇺🇸 EN</option>
+            <option value="uz">🇺🇿 UZ</option>
+          </select>
         </div>
       )}
     </header>
