@@ -1,89 +1,133 @@
-'use client'
+"use client";
 
 import { FormEvent, memo } from "react";
+import { Send, Mail, Phone, MapPin } from "lucide-react";
 
 const Contact = () => {
-
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-  }
+    e.preventDefault();
+  };
 
   return (
-    <section id="contact">
-      <div className="flex justify-center items-center min-h-screen bg-gradient-to-b from-[#D7D7D7] via-white to-[#D7D7D7] px-4">
-        <div className="text-center max-w-md md:max-w-xl w-full">
-          <div className="inline-block border-4 px-6 py-3 md:px-10 md:py-4 mb-6 md:mb-8">
-            <h1 className="text-2xl md:text-[30px] font-bold tracking-widest">
-              CONTACT
-            </h1>
-          </div>
+    <section
+      id="contact"
+      className="relative bg-[#0a0a0a] text-white py-32 px-6 overflow-hidden"
+    >
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] -z-10" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-[120px] -z-10" />
 
-          <p className="text-xs md:text-sm text-gray-700 mb-6 pt-6 md:pt-[59px]">
-            Nulla in velit a metus rhoncus tempus. Nulla congue nulla vel sem
-            varius finibus. Sed ornare sit amet lorem sed viverra. In vel urna
-            quis libero viverra facilisis ut ac est.
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-20">
+          <h2 className="text-sm tracking-[0.4em] text-blue-500 font-bold mb-4 uppercase">
+            Aloqa
+          </h2>
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-6">
+            Keling{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+              bog‘lanamiz
+            </span>
+          </h1>
+          <p className="max-w-2xl mx-auto text-gray-400">
+            Loyihangiz bo‘yicha savollar, hamkorlik yoki g‘oyalar bo‘lsa —
+            bemalol yozing.
           </p>
+        </div>
 
-          <div className="flex justify-center mb-12 md:mb-[123px]">
-            <div className="w-10 md:w-16 border-t mr-1 md:mr-2" />
-            <div className="w-3 h-1 border-b-2 transform rotate-45 mr-1 md:mr-2" />
-            <div className="w-3 h-1 border-b-2 transform rotate-45 mr-1 md:mr-2" />
-            <div className="w-3 h-1 border-b-2 transform -rotate-45" />
-            <div className="w-3 h-1 border-b-2 transform -rotate-45" />
-            <div className="w-10 md:w-16 border-t ml-1 md:ml-2" />
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+          <div className="lg:col-span-4 space-y-10">
+            <div className="space-y-6">
+              <ContactItem
+                icon={<Mail size={20} />}
+                label="Email"
+                value="info@example.com"
+                href="mailto:info@example.com"
+              />
+              <ContactItem
+                icon={<Phone size={20} />}
+                label="Telefon"
+                value="+998 90 123 45 67"
+                href="tel:+998901234567"
+              />
+              <ContactItem
+                icon={<MapPin size={20} />}
+                label="Manzil"
+                value="Toshkent, O‘zbekiston"
+              />
+            </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
-            <div className="border-b-4">
-              <input
-                type="text"
-                name="name"
-                placeholder="ENTER YOUR NAME*"
-                className="w-full py-2 md:py-3 px-1 focus:outline-none bg-transparent text-sm md:text-base"
-                required
-              />
-            </div>
-            <div className="border-b-4">
-              <input
+          <div className="lg:col-span-8">
+            <form
+              onSubmit={handleSubmit}
+              className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white/5 border border-white/10 rounded-2xl p-10"
+            >
+              <Input label="To‘liq ismingiz" placeholder="Ismingiz" />
+              <Input
+                label="Email"
+                placeholder="email@example.com"
                 type="email"
-                name="email"
-                placeholder="ENTER YOUR EMAIL*"
-                className="w-full py-2 md:py-3 px-1 focus:outline-none bg-transparent text-sm md:text-base"
-                required
               />
-            </div>
-            <div className="border-b-4">
-              <input
-                type="tel"
-                name="phone"
-                placeholder="PHONE NUMBER"
-                className="w-full py-2 md:py-3 px-1 focus:outline-none bg-transparent text-sm md:text-base"
+              <Input
+                label="Phone"
+                placeholder="xx xxx xx xx"
+                type="phoneNumber"
               />
-            </div>
-            <div className="border-b-4">
-              <textarea
-                name="message"
-                placeholder="YOUR MESSAGE*"
-                className="w-full py-2 md:py-3 px-1 focus:outline-none bg-transparent h-24 md:h-28 resize-none text-sm md:text-base"
-                required
-              />
-            </div>
 
-            <div className="flex items-center justify-center mt-6 md:mt-8">
-              <div className="border-1 h-4 md:h-6 mr-2 md:mr-4" />
-              <button
-                type="submit"
-                className="tracking-widest font-semibold text-xs md:text-sm cursor-pointer"
-              >
-                SUBMIT
-              </button>
-              <div className="border-1 h-4 md:h-6 ml-2 md:ml-4" />
-            </div>
-          </form>
+              <div className="md:col-span-2 flex flex-col gap-2">
+                <label className="text-sm text-gray-300">Xabar</label>
+                <textarea
+                  placeholder="Loyiha haqida batafsil yozing..."
+                  className="bg-transparent border-b border-white/20 py-3 outline-none focus:border-blue-500 transition resize-none h-32 placeholder:text-gray-500"
+                  required
+                />
+              </div>
+
+              <div className="md:col-span-2 pt-6">
+                <button
+                  type="submit"
+                  className="inline-flex items-center gap-3 px-10 py-4 rounded-xl font-bold tracking-widest uppercase
+                  bg-gradient-to-r from-blue-500 to-purple-500 hover:opacity-90 transition cursor-pointer"
+                >
+                  Xabar yuborish
+                  <Send size={16} />
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </section>
   );
 };
+
+const ContactItem = ({ icon, label, value, href }: any) => (
+  <div className="flex items-start gap-4">
+    <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-blue-400">
+      {icon}
+    </div>
+    <div>
+      <p className="text-xs uppercase tracking-widest text-gray-500">{label}</p>
+      {href ? (
+        <a href={href} className="text-lg hover:text-blue-400 transition">
+          {value}
+        </a>
+      ) : (
+        <p className="text-lg">{value}</p>
+      )}
+    </div>
+  </div>
+);
+
+const Input = ({ label, placeholder, type = "text" }: any) => (
+  <div className="flex flex-col gap-2">
+    <label className="text-sm text-gray-300">{label}</label>
+    <input
+      type={type}
+      placeholder={placeholder}
+      className="bg-transparent border-b border-white/20 py-3 outline-none focus:border-blue-500 transition placeholder:text-gray-500"
+      required
+    />
+  </div>
+);
 
 export default memo(Contact);

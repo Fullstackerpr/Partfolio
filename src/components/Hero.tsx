@@ -1,106 +1,85 @@
+"use client";
+
 import { memo } from "react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const Hero = () => {
   return (
-    <div>
-      <div className="flex justify-between items-center h-screen overflow-hidden bg-[#D7D7D7]">
+    <section className="relative h-screen overflow-hidden bg-[#0a0a0a] text-white">
+      {/* Glow */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/20 blur-[140px]" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-600/20 blur-[140px]" />
+
+      <div className="relative flex h-full">
+        {/* LEFT */}
         <div
-          className="px-[273px] flex flex-col justify-center font-bold bg-[#D7D7D7]"
+          className="flex flex-col justify-center px-10 md:px-32 font-bold w-full md:w-1/2"
           style={{
-            clipPath: "polygon(0 0, 100% 0, 94% 100%, 0% 100%)",
+            clipPath: "polygon(0 0, 100% 0, 92% 100%, 0% 100%)",
           }}
         >
-          <h4 className="text-[40px]">Hi, I am</h4>
-          <h1 className="text-[80px] leading-[90px] w-[300px] mb-6">
-            Bahodir Nabijanov
+          <h4 className="text-2xl md:text-4xl text-gray-400 mb-2">
+            Hi, I am
+          </h4>
+
+          <h1 className="text-5xl md:text-7xl leading-tight mb-6">
+            Bahodir <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+              Nabijanov
+            </span>
           </h1>
-          <p className="text-[#909090] text-[25px] mb-6">
+
+          <p className="text-lg md:text-2xl text-gray-400 mb-8">
             Full-Stack Developer
           </p>
 
+          {/* Socials */}
           <div className="flex gap-4">
-            <img
-              src="/mail.svg"
-              alt="mail"
-              className="w-8 h-8 cursor-pointer"
+            <Social
+              href="mailto:bahodirnabijanov782@gmail.com"
+              icon={<Mail size={18} />}
             />
-            <a
+            <Social
               href="https://github.com/Fullstackerpr"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="/git.svg"
-                alt="github"
-                className="w-8 h-8 cursor-pointer"
-              />
-            </a>
-            <a
+              icon={<Github size={18} />}
+            />
+            <Social
               href="https://www.linkedin.com/in/bahodir-nabijanov-816804350/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="/in.svg"
-                alt="linkedin"
-                className="w-8 h-8 cursor-pointer"
-              />
-            </a>
+              icon={<Linkedin size={18} />}
+            />
           </div>
         </div>
 
+        {/* RIGHT */}
         <div
-          className="flex justify-center items-center w-full h-full bg-black"
+          className="hidden md:flex items-center justify-center w-1/2 bg-black"
           style={{
-            clipPath: "polygon(6% 0, 100% 0, 100% 100%, 0% 100%)",
+            clipPath: "polygon(8% 0, 100% 0, 100% 100%, 0% 100%)",
           }}
         >
           <img
             src="/myimg.jpg"
             alt="hero"
-            className="w-[500px] h-[600px] object-contain"
+            className="w-[420px] h-[560px] object-cover rounded-2xl border border-white/10"
           />
         </div>
       </div>
-
-      <div className="relative flex flex-col md:flex-row gap-[40px] md:gap-[100px] bg-[#1D1D1D] text-white px-[20px] md:px-[102px] overflow-hidden">
-        <div className="absolute inset-0 md:hidden">
-          <img
-            src="/itb.png"
-            alt="it berries background"
-            className="w-full h-full object-cover opacity-20"
-          />
-        </div>
-
-        <div className="relative w-full py-[30px] md:py-[54px] text-center md:text-left z-10">
-          <h2 className="font-bold text-[24px] md:text-[30px] mb-[30px] md:mb-[60px]">
-            IT BERRIES
-          </h2>
-          <p className="mb-[20px] md:mb-[26px] text-[14px] md:text-[15px] leading-relaxed">
-            Nulla in velit a metus rhoncus tempus. Nulla congue nulla vel sem
-            varius finibus. Sed ornare sit amet lorem sed viverra. In vel urna
-            quis libero viverra facilisis ut ac est. Morbi commodo, eros in
-            dignissim tempus, lacus odio rutrum augue, in semper sem magna quis
-            tellus. Etiam enim erat, suscipit eu semper a, dictum sit amet elit.
-            Nunc egestas nisi eget enim gravida facilisis. Pellentesque laoreet
-            varius turpis vel pharetra. Ut ante justo, consequat vitae elementum
-            tempor, accumsan nec eros.
-          </p>
-          <button className="font-semibold text-[14px] md:text-[15px]">
-            READ MORE
-          </button>
-        </div>
-
-        <div className="hidden md:flex w-full justify-end">
-          <img
-            src="/itb.png"
-            alt="it berries"
-            className="h-full object-cover"
-          />
-        </div>
-      </div>
-    </div>
+    </section>
   );
 };
+
+const Social = ({ href, icon }: any) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 
+    flex items-center justify-center text-gray-400
+    hover:text-white hover:border-blue-500/50 hover:bg-gradient-to-r hover:from-blue-500/20 hover:to-purple-500/20
+    transition-all duration-300"
+  >
+    {icon}
+  </a>
+);
 
 export default memo(Hero);
