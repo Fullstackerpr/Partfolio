@@ -1,6 +1,42 @@
 {
-    "about": "Haqida",
-    "skill": "Ko'nikmalar",
-    "portfolio": "Portfel",
-    "contact": "Aloqa"
+    "header": {
+        "home": "Bosh Sahifa",
+        "about": "Men Haqimda",
+        "services": "Xizmatlar",
+        "portfolio": "Portfolio",
+        "contact": "Aloqa"
+    },
+    "hero": {
+        "greeting": "Salom, men",
+        "title": "Bahodir <1>Nabijanov</1>",
+        "subtitle": "Full-Stack Dasturchi",
+        "description": "Men biznes muammolarini hal qiladigan, kengaytiriladigan va yuqori samarali veb-ilovalarni yarataman.",
+        "cta": "Ishlarimni ko'rish"
+    },
+    "about": {
+        "title": "Men Haqimda",
+        "description": "Men murakkab muammolarni oqlangan yechimlarga aylantiradigan ishtiyoqli dasturchiman. MERN stack va Next.js bo'yicha tajribam bilan biznesingizni raqamli dunyoda samarali rivojlantirishga yordam beraman."
+    },
+    "services": {
+        "title": "Xizmatlarim",
+        "web_dev": {
+            "title": "Veb Dasturlash",
+            "desc": "O'sish va faollikni ta'minlaydigan maxsus veb-saytlar."
+        },
+        "app_dev": {
+            "title": "Mobil Ilovalar",
+            "desc": "iOS va Android uchun kross-platforma ilovalar."
+        },
+        "seo": {
+            "title": "SEO Optimizatsiya",
+            "desc": "Reytingni oshirish va maqsadli auditoriyaga erishish."
+        }
+    },
+    "contact": {
+        "title": "Bog'lanish",
+        "name": "Ismingiz",
+        "email": "Elektron pochtangiz",
+        "message": "Xabaringiz",
+        "send": "Xabar yuborish"
+    }
 }

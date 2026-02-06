@@ -2,8 +2,12 @@
 
 import { memo } from "react";
 import { Github, Linkedin, Mail } from "lucide-react";
+import { useTranslation, Trans } from "@/hooks/useTranslation";
+import NextImage from "next/image";
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="relative h-screen overflow-hidden bg-[#0a0a0a] text-white">
       {/* Glow */}
@@ -19,19 +23,31 @@ const Hero = () => {
           }}
         >
           <h4 className="text-2xl md:text-4xl text-gray-400 mb-2">
-            Hi, I am
+            {t("hero.greeting")}
           </h4>
 
           <h1 className="text-5xl md:text-7xl leading-tight mb-6">
-            Bahodir <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
-              Nabijanov
-            </span>
+            <Trans i18nKey="hero.title">
+              Bahodir <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+                Nabijanov
+              </span>
+            </Trans>
           </h1>
 
           <p className="text-lg md:text-2xl text-gray-400 mb-8">
-            Full-Stack Developer
+            {t("hero.subtitle")}
           </p>
+
+          <p className="text-base md:text-xl text-gray-300 mb-8 max-w-lg">
+            {t("hero.description")}
+          </p>
+
+          <div className="mb-8">
+            <a href="#portfolio" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition">
+              {t("hero.cta")}
+            </a>
+          </div>
 
           {/* Socials */}
           <div className="flex gap-4">
@@ -57,10 +73,13 @@ const Hero = () => {
             clipPath: "polygon(8% 0, 100% 0, 100% 100%, 0% 100%)",
           }}
         >
-          <img
+          <NextImage
             src="/myimg.jpg"
             alt="hero"
+            width={420}
+            height={560}
             className="w-[420px] h-[560px] object-cover rounded-2xl border border-white/10"
+            priority
           />
         </div>
       </div>
@@ -68,7 +87,7 @@ const Hero = () => {
   );
 };
 
-const Social = ({ href, icon }: any) => (
+const Social = ({ href, icon }: { href: string; icon: React.ReactNode }) => (
   <a
     href={href}
     target="_blank"

@@ -2,20 +2,33 @@
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useTranslation } from "@/hooks/useTranslation";
+import NextImage from "next/image";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+  };
 
   return (
     <header className="fixed top-0 left-0 w-full z-50">
-      <div className="backdrop-blur-xl bg-black/40 border-b border-white/10">
+      <div className="backdrop-blur-xl bg-black/10 border-b border-white/10">
         <div className="py-4 px-32 flex items-center justify-between">
-          <img src="/myLogoo.png" alt="Logo" className="w-10 bg-amber-100" />
+          <NextImage
+            src="/itb.png"
+            alt="Logo"
+            width={40}
+            height={40}
+            className="w-10 bg-amber-100/10 rounded-full"
+          />
 
           <nav className="hidden md:flex items-center gap-10 text-sm text-gray-300">
-            <NavLink href="#about">About</NavLink>
-            <NavLink href="#skill">Skills</NavLink>
-            <NavLink href="#portfolio">Portfolio</NavLink>
+            <NavLink href="#about">{t("header.about")}</NavLink>
+            <NavLink href="#skill">Skills</NavLink> {/* TODO: Add translation key if available */}
+            <NavLink href="#portfolio">{t("header.portfolio")}</NavLink>
 
             <a href="#contact">
               <button
@@ -23,16 +36,20 @@ const Header = () => {
                 bg-gradient-to-r from-blue-500 to-purple-500 text-white
                 hover:opacity-90 transition"
               >
-                CONTACT
+                {t("header.contact").toUpperCase()}
               </button>
             </a>
 
-            <select className="bg-white/10 border border-white/10 text-white px-2 py-1 rounded-lg outline-none cursor-pointer">
-              <option className="text-black" value="ru">
-                🇷🇺 RU
-              </option>
+            <select
+              className="bg-white/10 border border-white/10 text-white px-2 py-1 rounded-lg outline-none cursor-pointer"
+              onChange={(e) => changeLanguage(e.target.value)}
+              defaultValue={i18n.language}
+            >
               <option className="text-black" value="en">
                 🇺🇸 EN
+              </option>
+              <option className="text-black" value="ru">
+                🇷🇺 RU
               </option>
               <option className="text-black" value="uz">
                 🇺🇿 UZ
@@ -53,13 +70,13 @@ const Header = () => {
         <div className="md:hidden bg-[#0a0a0a]/95 backdrop-blur-xl border-b border-white/10">
           <div className="flex flex-col items-center gap-6 py-10 text-gray-300">
             <MobileLink href="#about" onClick={() => setIsOpen(false)}>
-              About
+              {t("header.about")}
             </MobileLink>
             <MobileLink href="#skill" onClick={() => setIsOpen(false)}>
               Skills
             </MobileLink>
             <MobileLink href="#portfolio" onClick={() => setIsOpen(false)}>
-              Portfolio
+              {t("header.portfolio")}
             </MobileLink>
 
             <a href="#contact" onClick={() => setIsOpen(false)}>
@@ -67,16 +84,20 @@ const Header = () => {
                 className="px-8 py-3 rounded-xl font-bold tracking-widest
                 bg-gradient-to-r from-blue-500 to-purple-500 text-white"
               >
-                CONTACT
+                {t("header.contact").toUpperCase()}
               </button>
             </a>
 
-            <select className="bg-white/10 border border-white/10 text-white px-3 py-2 rounded-lg outline-none cursor-pointer">
-              <option className="text-black" value="ru">
-                🇷🇺 RU
-              </option>
+            <select
+              className="bg-white/10 border border-white/10 text-white px-3 py-2 rounded-lg outline-none cursor-pointer"
+              onChange={(e) => changeLanguage(e.target.value)}
+              defaultValue={i18n.language}
+            >
               <option className="text-black" value="en">
                 🇺🇸 EN
+              </option>
+              <option className="text-black" value="ru">
+                🇷🇺 RU
               </option>
               <option className="text-black" value="uz">
                 🇺🇿 UZ
@@ -89,7 +110,7 @@ const Header = () => {
   );
 };
 
-const NavLink = ({ href, children }: any) => (
+const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
   <a
     href={href}
     className="relative hover:text-white transition after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px]
@@ -100,7 +121,7 @@ const NavLink = ({ href, children }: any) => (
   </a>
 );
 
-const MobileLink = ({ href, children, onClick }: any) => (
+const MobileLink = ({ href, children, onClick }: { href: string; children: React.ReactNode; onClick: () => void }) => (
   <a
     href={href}
     onClick={onClick}

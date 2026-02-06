@@ -1,8 +1,19 @@
 @import "tailwindcss";
 
 :root {
-    --first: #D7D7D7;
-    --second: #000;
+    --background: #0a0a0a;
+    --surface: #1a1a1a;
+    --primary: #3b82f6;
+    --secondary: #8b5cf6;
+    --text-main: #f3f4f6;
+    --text-secondary: #9ca3af;
+    
+    --foreground: var(--text-main);
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text-main);
 }
 
 html {

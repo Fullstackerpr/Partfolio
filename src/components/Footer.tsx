@@ -55,7 +55,7 @@ const Footer = () => {
   );
 };
 
-const Social = ({ href, icon }: any) => (
+const Social = ({ href, icon }: { href: string; icon: React.ReactNode }) => (
   <a
     href={href}
     target="_blank"

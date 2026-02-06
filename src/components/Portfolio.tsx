@@ -58,15 +58,15 @@ const Portfolio = () => {
                 <h3 className="text-3xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
                   {project.title}
                 </h3>
-                
+
                 <p className="text-gray-400 mb-8 leading-relaxed line-clamp-3">
                   {project.description}
                 </p>
 
                 <div className="flex flex-wrap gap-2 mb-10">
                   {project.tags.map((tag, i) => (
-                    <span 
-                      key={i} 
+                    <span
+                      key={i}
                       className="text-xs font-medium text-gray-300 bg-white/5 px-3 py-1 rounded-md border border-white/5"
                     >
                       {tag}
@@ -81,7 +81,7 @@ const Portfolio = () => {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-white font-bold hover:text-blue-500 transition-colors group/link"
                   >
-                    LOYIHANI KO'RISH
+                    LOYIHANI KO&apos;RISH
                     <ExternalLink size={18} className="group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform" />
                   </a>
                   <div className="flex gap-4 opacity-30">
@@ -98,8 +98,8 @@ const Portfolio = () => {
 
         <div className="mt-20 text-center">
           <p className="text-gray-500 mb-6">Boshqa loyihalarim GitHub profilimda mavjud</p>
-          <a 
-            href="https://github.com" 
+          <a
+            href="https://github.com"
             className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-black rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300"
           >
             GITHUB-NI OCHISH

@@ -1,5 +1,6 @@
 import { Skills } from "@/types";
 import { memo } from "react";
+import NextImage from "next/image";
 
 const Skill = () => {
 
@@ -33,11 +34,13 @@ const Skill = () => {
                   className="group relative flex flex-col items-center justify-center p-8 rounded-2xl bg-white/5 border border-white/5 hover:border-blue-500/30 hover:bg-white/10 transition-all duration-500 cursor-pointer"
                 >
                   <div className="absolute inset-0 bg-blue-500/0 group-hover:bg-blue-500/5 rounded-2xl blur-xl transition-all duration-500" />
-                  
+
                   <div className="relative transform group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-500 ease-out">
-                    <img
-                      src={data.img}
+                    <NextImage
+                      src={`/${data.img}`}
                       alt={data.name}
+                      width={80}
+                      height={80}
                       className="w-16 h-16 md:w-20 md:h-20 object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500"
                     />
                   </div>
@@ -54,8 +57,8 @@ const Skill = () => {
         </div>
 
         <p className="mt-20 text-center text-gray-500 text-sm italic max-w-2xl mx-auto">
-          * Doimiy ravishda yangi texnologiyalarni o'rganish va mavjudlarini chuqurlashtirish ustida ishlayman. 
-          Hozirda Fullstack ekotizimida yuqori samaradorlikka e'tibor qaratganman.
+          * Doimiy ravishda yangi texnologiyalarni o&apos;rganish va mavjudlarini chuqurlashtirish ustida ishlayman.
+          Hozirda Fullstack ekotizimida yuqori samaradorlikka e&apos;tibor qaratganman.
         </p>
       </div>
     </section>

@@ -1,0 +1,19 @@
+
+> partfolio@0.1.0 lint
+> eslint
+
+
+/home/hucker/Desktop/Partfolio/src/components/Footer.tsx
+  58:33  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/home/hucker/Desktop/Partfolio/src/components/Header.tsx
+  19:11  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/home/hucker/Desktop/Partfolio/src/components/Hero.tsx
+  75:11  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/home/hucker/Desktop/Partfolio/src/components/Skill.tsx
+  38:21  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+✖ 4 problems (1 error, 3 warnings)
+
